@@ -1,4 +1,3 @@
-
 letters = "abcdefghijklmnopqrstuvwxyz"
 num_letters = len(letters)
 
