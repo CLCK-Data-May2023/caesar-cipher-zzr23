@@ -6,7 +6,7 @@ def encrypt(plaintext, key):
     for letter in plaintext:
         letter = letter.lower()
         if not letter == ' ':
-            index = letters.find(letter)
+            index = letters.find(letter) 
             if index == -1:
                 ciphertext += letter
             else:
