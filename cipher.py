@@ -5,7 +5,7 @@ def encrypt(plaintext, key):
     ciphertext = ''
     for letter in plaintext:
         letter = letter.lower()
-        if letter != ' ':
+        if not letter == ' ':
             index = letters.find(letter)
             if index == -1:
                 ciphertext += letter
@@ -20,7 +20,7 @@ def decrypt(ciphertext, key):
     plaintext = ''
     for letter in ciphertext:
         letter = letter.lower()
-        if letter != ' ':
+        if not letter == ' ':
             index = letters.find(letter)
             if index == -1:
                 plaintext += letter
@@ -38,7 +38,7 @@ def encrypt_decrypt(text, mode, key):
 
     for letter in text:
         letter = letter.lower()
-        if letter != ' ':
+        if not letter == ' ':
             index = letters.find(letter)
             if index == -1:
                 result += letter
@@ -49,6 +49,7 @@ def encrypt_decrypt(text, mode, key):
             result += ' '
     return result
 
+print()
 print('*** CAESAR CIPHER PROGRAM ***')
 print()
 
@@ -62,7 +63,7 @@ if user_input == 'e':
     key = int(input('Enter the key (1 through 26): '))
     text = input('Enter the text to encrypt: ')
     ciphertext = encrypt_decrypt(text, user_input, key)
-    print(f'CIPHERTEXT: {ciphertext}')
+    print(f'CIPHERTEXT: {ciphertext} ')
 
 elif user_input == 'd':
     print('DECRYPTION MODE SELECTED')
@@ -70,4 +71,4 @@ elif user_input == 'd':
     key = int(input('Enter the key (1 through 26): '))
     text = input('Enter the text to decrypt: ')
     plaintext = encrypt_decrypt(text, user_input, key)
-    print(f'PLAINTEXT: {plaintext}')
+    print(f'PLAINTEXT: {plaintext} ')
